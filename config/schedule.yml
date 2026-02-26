@@ -1,3 +1,0 @@
-# Este arquivo era usado pelo sidekiq-cron para agendar jobs recorrentes.
-# Os jobs foram migrados para SolidQueue (config/recurring.yml).
-# O sidekiq e sidekiq-cron foram removidos do Gemfile.

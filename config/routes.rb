@@ -1,31 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users,
-    defaults: { format: :json },
-    controllers: {
-      sessions: "users/sessions",
-      registrations: "users/registrations",
-      passwords: "users/devise_passwords"
-    }
+  namespace :api do
+    namespace :v1 do
+      post "rsvp", to: "rsvp#create"
 
-  namespace :users do
-    put :change_password, to: "passwords#update"
-  end
-
-  get "up" => "rails/health#show", as: :rails_health_check
-
-  # Dashboard e recursos do paciente
-  namespace :clients do
-    get :dashboard, to: "dashboard#index"
-    resources :patient_notes, only: %i[index create update destroy]
-    resources :sessions, only: %i[index]
-  end
-
-  # Dashboard e recursos da terapeuta
-  namespace :therapists do
-    get :dashboard, to: "dashboard#index"
-    resources :patients, only: %i[index show create update destroy] do
-      resources :notes, only: %i[index create show update destroy], controller: "clinical_notes", as: :clinical_notes
+      resources :gifts, only: [:index] do
+        post "select", on: :member
+      end
     end
-    resources :sessions, only: %i[create update destroy]
   end
+
+  get "up", to: "rails/health#show", as: :rails_health_check
 end
