@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_26_000003) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_27_172851) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -35,10 +35,15 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_26_000003) do
     t.datetime "created_at", null: false
     t.string "full_name", null: false
     t.text "message"
+    t.string "phone", null: false
     t.bigint "principal_id"
+    t.integer "rsvp_status", default: 0, null: false
+    t.string "rsvp_token"
     t.datetime "updated_at", null: false
     t.index ["full_name"], name: "index_guests_on_full_name"
+    t.index ["phone"], name: "index_guests_on_phone", unique: true
     t.index ["principal_id"], name: "index_guests_on_principal_id"
+    t.index ["rsvp_token"], name: "index_guests_on_rsvp_token", unique: true
   end
 
   add_foreign_key "gift_selections", "gifts"

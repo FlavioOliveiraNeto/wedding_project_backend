@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      post "rsvp", to: "rsvp#create"
+      get "rsvp/:token", to: "rsvps#show"
+      patch "rsvp/:token", to: "rsvps#update"
 
       resources :gifts, only: [:index] do
         post "select", on: :member
