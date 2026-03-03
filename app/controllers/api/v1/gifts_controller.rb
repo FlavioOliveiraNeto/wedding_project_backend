@@ -10,6 +10,8 @@ module Api
             name: gift.name,
             description: gift.description,
             value: gift.value,
+            category: gift.category,
+            category_label: gift.category_label,
             selected: gift.selected?,
             selected_by: gift.gift_selection&.full_name
           }

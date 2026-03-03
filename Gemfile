@@ -39,3 +39,4 @@ end
 gem 'rack-attack'
 gem "rack-cors"
 gem 'secure_headers'
+gem "twilio-ruby", "~> 7.0"

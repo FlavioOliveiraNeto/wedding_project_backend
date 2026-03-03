@@ -4,34 +4,39 @@ class WhatsappInviteService
   end
 
   def call
-    message = build_message
-
-    # Aqui você chama a API externa
     WhatsappApi.send_message(
       to: @guest.phone,
-      body: message
+      body: build_message
     )
   end
 
   private
 
   def build_message
-    companions = @guest.companions.pluck(:full_name)
+    companion_names = @guest.companions.pluck(:full_name)
+
+    greeting = if companion_names.any?
+      "Você e #{companion_names.join(", ")} estão convidados para o nosso casamento 💍"
+    else
+      "Você está convidado para o nosso casamento 💍"
+    end
+
+    site_url = ENV.fetch("SITE_URL", "https://meucasamento.com")
 
     <<~MSG
     Olá #{@guest.full_name} ✨
 
-    Você e #{companions.join(", ")} estão convidados para o nosso casamento 💍
+    #{greeting}
 
     📅 Data: 04/04/2026
     🕒 Horário: 12h
     📍 Local: Espaço B eventos - Rua Dona Gercina Borges Teixeira, 720, quadra 55, lote 16, Bairro Ilda, Aparecida de Goiânia
 
     Confira os detalhes:
-    https://meucasamento.com
+    #{site_url}
 
     Confirme sua presença:
-    https://meucasamento.com/rsvp/#{@guest.rsvp_token}
+    #{site_url}/rsvp/#{@guest.rsvp_token}
     MSG
   end
 end
