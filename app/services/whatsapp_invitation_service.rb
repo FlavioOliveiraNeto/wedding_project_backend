@@ -20,6 +20,10 @@ class WhatsappInvitationService
 
     Estamos muito felizes em convidar você para nosso casamento! 💍
 
+    📅 Data: 04/04/2026
+    🕒 Horário: 12h
+    📍 Local: Espaço B eventos - Rua Dona Gercina Borges Teixeira, 720, quadra 55, lote 16, Bairro Ilda, Aparecida de Goiânia
+
     Confirme sua presença pelo link:
     #{ENV['SITE_URL']}/rsvp/#{@guest.rsvp_token}
 
