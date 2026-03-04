@@ -4,7 +4,6 @@ namespace :import do
     require "csv"
     file_path = Rails.root.join("lista_presentes.csv")
 
-    # Categorias do CSV podem vir capitalizadas ou com nomes alternativos
     CATEGORY_MAP = {
       "banheiro"   => "banheiro",
       "quarto"     => "quarto",
@@ -14,7 +13,7 @@ namespace :import do
       "escritorio" => "escritorio",
       "decoracao"  => "decoracao",
       "eletronico" => "eletronico",
-      "limpeza"    => "outro",   # não existe no sistema, mapeado para "outro"
+      "limpeza"    => "outro",   
       "outro"      => "outro"
     }.freeze
 
@@ -54,7 +53,6 @@ namespace :import do
     require "csv"
     file_path = Rails.root.join("lista_convidados.csv")
 
-    # Primeira passagem: agrupa linhas em [principal_row, [companion_rows]]
     groups            = []
     current_principal = nil
     current_companions = []

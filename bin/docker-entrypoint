@@ -3,14 +3,23 @@ set -e
 
 echo "🚀 Docker entrypoint iniciado"
 
-if [ "$1" = "bin/rails" ] && [ "$2" = "server" ]; then
-  echo "⏳ Aguardando Postgres..."
-  until pg_isready -h db -p 5432; do
-    sleep 2
-  done
+# Match all variants of starting the Rails server:
+#   bin/rails server                      (dev, direct)
+#   ./bin/rails server                    (dev, with path)
+#   ./bin/thrust ./bin/rails server       (production — thrust wraps rails)
+#
+# The original check `[ "$1" = "bin/rails" ]` silently failed in production
+# because the CMD starts with ./bin/thrust, making $1 = ./bin/thrust.
+case "$*" in
+  *"rails server"*)
+    echo "⏳ Aguardando Postgres..."
+    until pg_isready -h db -p 5432; do
+      sleep 2
+    done
 
-  echo "✅ Postgres disponível"
-  bin/rails db:prepare
-fi
+    echo "✅ Postgres disponível"
+    bin/rails db:prepare
+    ;;
+esac
 
 exec "$@"

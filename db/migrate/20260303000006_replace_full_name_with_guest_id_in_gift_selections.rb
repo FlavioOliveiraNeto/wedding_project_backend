@@ -1,6 +1,5 @@
 class ReplaceFullNameWithGuestIdInGiftSelections < ActiveRecord::Migration[8.1]
   def up
-    # Remove seleções existentes para permitir a troca de coluna sem conflitos
     execute "DELETE FROM gift_selections"
 
     remove_column :gift_selections, :full_name

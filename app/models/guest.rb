@@ -4,14 +4,13 @@ class Guest < ApplicationRecord
   before_validation :normalize_phone
   before_create :generate_rsvp_token
 
-  belongs_to :principal, class_name: "Guest", optional: true
+  belongs_to :principal, class_name: "Guest", optional: true,
+                         counter_cache: :companions_count
   has_many :companions, class_name: "Guest", foreign_key: :principal_id, dependent: :destroy
 
   validates :full_name, presence: true
   validates :companions_count, presence: true,
                                numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  # Telefone obrigatório apenas para o responsável principal.
-  # Acompanhantes podem não ter número próprio (crianças, idosos, etc).
   validates :phone, presence: true, if: :principal?
   validates :phone, uniqueness: true, allow_blank: true
   validates :phone, format: {
@@ -22,6 +21,15 @@ class Guest < ApplicationRecord
 
   scope :principals, -> { where(principal_id: nil) }
 
+  def group_status
+    all_statuses = ([ self ] + companions.to_a).map(&:rsvp_status).uniq
+    return "pending"   if all_statuses.any? { |s| s == "pending" }
+    return "confirmed" if all_statuses.all? { |s| s == "confirmed" }
+    return "declined"  if all_statuses.all? { |s| s == "declined" }
+
+    "partial"
+  end
+
   private
 
   def principal?
@@ -31,10 +39,8 @@ class Guest < ApplicationRecord
   def normalize_phone
     return if phone.blank?
 
-    # Remove tudo que não for dígito
     digits = phone.to_s.gsub(/\D/, "")
 
-    # Adiciona DDI 55 se o número não começar com ele
     digits = "55#{digits}" unless digits.start_with?("55")
 
     self.phone = digits

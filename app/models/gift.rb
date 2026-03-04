@@ -38,7 +38,11 @@ class Gift < ApplicationRecord
   end
 
   def groups_count
-    gift_selections.select(:group_token).distinct.count
+    if gift_selections.loaded?
+      gift_selections.map(&:group_token).uniq.count
+    else
+      gift_selections.select(:group_token).distinct.count
+    end
   end
 
   def category_label

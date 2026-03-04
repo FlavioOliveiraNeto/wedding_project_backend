@@ -8,7 +8,7 @@ module Api
           full_name: @guest.full_name,
           companions: @guest.companions.map { |c| { id: c.id, full_name: c.full_name, status: c.rsvp_status } },
           status: @guest.rsvp_status,
-          group_status: compute_group_status
+          group_status: @guest.group_status
         }
       end
 
@@ -38,9 +38,10 @@ module Api
       end
 
       def confirm_all
+        was_pending = @guest.pending?
         @guest.update!(rsvp_status: :confirmed)
         @guest.companions.update_all(rsvp_status: Guest.rsvp_statuses[:confirmed])
-        WhatsappConfirmationNotificationService.new(@guest).call
+        WhatsappConfirmationNotificationService.new(@guest).call if was_pending
       end
 
       def decline_all
@@ -57,6 +58,8 @@ module Api
           return render json: { error: "IDs de acompanhantes inválidos." }, status: :unprocessable_entity
         end
 
+        was_pending = @guest.pending?
+
         @guest.update!(rsvp_status: :confirmed)
 
         if declined_ids.any?
@@ -66,16 +69,7 @@ module Api
           @guest.companions.update_all(rsvp_status: Guest.rsvp_statuses[:confirmed])
         end
 
-        WhatsappConfirmationNotificationService.new(@guest).call
-      end
-
-      def compute_group_status
-        all_statuses = ([@guest] + @guest.companions.to_a).map(&:rsvp_status).uniq
-        return "pending" if all_statuses.any? { |s| s == "pending" }
-        return "confirmed" if all_statuses.all? { |s| s == "confirmed" }
-        return "declined" if all_statuses.all? { |s| s == "declined" }
-
-        "partial"
+        WhatsappConfirmationNotificationService.new(@guest).call if was_pending
       end
     end
   end
