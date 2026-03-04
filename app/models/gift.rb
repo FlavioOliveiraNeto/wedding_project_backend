@@ -1,5 +1,5 @@
 class Gift < ApplicationRecord
-  has_one :gift_selection, dependent: :destroy
+  has_many :gift_selections, dependent: :destroy
 
   CATEGORIES = %w[
     quarto
@@ -26,11 +26,19 @@ class Gift < ApplicationRecord
   }.freeze
 
   validates :name, presence: true
-  validates :value, numericality: { greater_than: 0 }, allow_nil: true
   validates :category, inclusion: { in: CATEGORIES }
+  validates :quantity, numericality: { only_integer: true, greater_than: 0 }
 
-  def selected?
-    gift_selection.present?
+  def sold_out?
+    groups_count >= quantity
+  end
+
+  def remaining
+    [ quantity - groups_count, 0 ].max
+  end
+
+  def groups_count
+    gift_selections.select(:group_token).distinct.count
   end
 
   def category_label

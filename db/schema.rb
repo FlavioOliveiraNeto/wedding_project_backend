@@ -10,16 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_03_03_000001) do
+ActiveRecord::Schema[8.1].define(version: 2026_03_03_000007) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "gift_selections", force: :cascade do |t|
     t.datetime "created_at", null: false
-    t.string "full_name", null: false
     t.bigint "gift_id", null: false
+    t.string "group_token", default: "", null: false
+    t.bigint "guest_id", null: false
     t.datetime "updated_at", null: false
-    t.index ["gift_id"], name: "index_gift_selections_on_gift_id", unique: true
+    t.index ["gift_id"], name: "index_gift_selections_on_gift_id"
+    t.index ["group_token"], name: "index_gift_selections_on_group_token"
+    t.index ["guest_id"], name: "index_gift_selections_on_guest_id"
   end
 
   create_table "gifts", force: :cascade do |t|
@@ -27,8 +30,8 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_03_000001) do
     t.datetime "created_at", null: false
     t.text "description"
     t.string "name", null: false
+    t.integer "quantity", default: 1, null: false
     t.datetime "updated_at", null: false
-    t.decimal "value", precision: 10, scale: 2
     t.index ["category"], name: "index_gifts_on_category"
   end
 
@@ -37,7 +40,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_03_000001) do
     t.datetime "created_at", null: false
     t.string "full_name", null: false
     t.text "message"
-    t.string "phone", null: false
+    t.string "phone"
     t.bigint "principal_id"
     t.integer "rsvp_status", default: 0, null: false
     t.string "rsvp_token"
@@ -49,5 +52,6 @@ ActiveRecord::Schema[8.1].define(version: 2026_03_03_000001) do
   end
 
   add_foreign_key "gift_selections", "gifts"
+  add_foreign_key "gift_selections", "guests"
   add_foreign_key "guests", "guests", column: "principal_id"
 end

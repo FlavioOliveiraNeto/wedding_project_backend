@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       resources :gifts, only: [:index] do
         post "select", on: :member
       end
+
+      get "guests/search", to: "guests#search"
     end
   end
 
