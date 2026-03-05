@@ -29,8 +29,9 @@ namespace :import do
       category     = CATEGORY_MAP.fetch(raw_category, "outro")
       description  = row["description"].to_s.strip.presence
       quantity     = [ row["quantity"].to_s.strip.to_i, 1 ].max
+      purchase_url = row["purchase_url"].to_s.strip.presence
 
-      gift = Gift.new(name: name, category: category, description: description, quantity: quantity)
+      gift = Gift.new(name: name, category: category, description: description, quantity: quantity, purchase_url: purchase_url)
 
       if gift.save
         imported += 1

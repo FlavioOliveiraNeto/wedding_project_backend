@@ -1,61 +1,56 @@
-name,category,description,quantity,,,
-Lixo,Banheiro,Cor branca com 14 Litros,2,,,
-Jogo de toalha,Banheiro,,3,,,
-Travesseiro,Quarto,,4,,,USE APENAS A IMAGEM DE REF
-Tapete,Banheiro,,4,,,USE APENAS A IMAGEM DE REF
-Tapete,Cozinha,,2,,,
-Pano de prato,Cozinha,,4,,,NÃO SEI SE USA SO DE REF
-Jogo de cama,Quarto,Tamanho Queen,2,,,
-Kit cabide ,Quarto,50 unidades,1,,,USE APENAS A IMAGEM DE REF
-Espelho,Banheiro,,2,,,USE APENAS A IMAGEM DE REF
-Aspirador de pó,Limpeza,,1,,,
-Sanduicheira,Cozinha,,1,,,
-Batedeira,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Air fryer,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Jogo de copo,Cozinha,,2,,,
-Purificador de água,Cozinha,,1,,,
-Cama,Quarto,Conversar com o casal sobre detalhes,1,,,
-Máquina de lavar louça,Cozinha,,1,,,
-Forno,Cozinha,,1,,,
-Microondas ,Cozinha,,1,,,
-Sofá,Sala,Conversar com o casal sobre detalhes,1,,,
-Jogo de mesa e cadeiras,Sala,,1,,,USE APENAS A IMAGEM DE REF
-Televisão,Sala,Conversar com o casal sobre detalhes,1,,,USE APENAS A IMAGEM DE REF
-Marinex,Cozinha,,2,,,USE APENAS A IMAGEM DE REF
-Forma de bolo,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Kit Forma de Pudim,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Quejeira,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Kit Peneira,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Jogo de vasilha de plástico,Cozinha,,3,,,USE APENAS A IMAGEM DE REF
-Jarra de vidro,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Tábua de passar roupa,Limpeza,,1,,,USE APENAS A IMAGEM DE REF
-Jogo de taça,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Jogo de pia,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Jogo de banheiro ,Banheiro,,2,,,USE APENAS A IMAGEM DE REF
-Kit mantimentos ,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Ar condicionado,Quarto,Conversar com o casal sobre detalhes,1,,,
-Fuê,Cozinha,,1,,,
-Jogo de talheres ,Cozinha,,1,,,
-Faqueiro,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Colher,Cozinha,Kit 5 peças,1,,,
-Porta temperos,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Jogo de xicaras,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Panela de pressão,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Tábua de carne ,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Forma para pizza,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Aparelho de jantar,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Bowls Tigelas de Inox,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Bowls Tigelas De Cerâmica Azul,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Taça Cristal,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Taça De Sobremesa,Cozinha,,2,,,USE APENAS A IMAGEM DE REF
-Escorredor Inox,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Pá p/ Bolo,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Ralador,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Espremedor de batata,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Escorredor de Louça,Cozinha,,1,,,USE APENAS A IMAGEM DE REF
-Manta p/ Sofá,Limpeza,,1,,,USE APENAS A IMAGEM DE REF
-,,,,,,USE APENAS A IMAGEM DE REF
-,,,,,,USE APENAS A IMAGEM DE REF
-,,,,,,USE APENAS A IMAGEM DE REF
-,,,,,,USE APENAS A IMAGEM DE REF
-,,,,,,USE APENAS A IMAGEM DE REF
+name,category,description,quantity,purchase_url,
+Lixeira,Banheiro,Cor branca com 14 Litros,2,https://br.shp.ee/zqD6kaN3,
+Jogo de toalha,Banheiro,,3,https://www.mercadolivre.com.br/jogo-de-toalhas-buddemeyer-bella-extra-soft-banho-rosarosa-claro-4-pecas/p/MLB48811463?pdp_filters=item_id%3AMLB4037655445&attributes=COLOR%3ARosa_Rosa_claro_vpp&matt_tool=38524122#origin=share&sid=share&wid=MLB4037655445,
+Travesseiro,Quarto,,4,https://a.co/d/0aFhFJui,
+Tapete,Banheiro,,4,https://a.co/d/0fIveNLk,
+Tapete,Cozinha,,2,https://a.co/d/0aodu6ej,
+Pano de prato,Cozinha,,4,https://queissocamarada.com/loja/categoria-produto/panos-de-prato?product-page=2,
+Jogo de cama,Quarto,Tamanho Queen,2,https://a.co/d/0i1e4VNJ,
+Kit cabide,Quarto,50 unidades,1,https://a.co/d/0aaYPKs8,
+Espelho,Banheiro,,2,https://www.mercadolivre.com.br/espelho-retangular-com-led-frio-de-parede-banheiro-sala/up/MLBU3739185480?pdp_filters=item_id%3AMLB6175357696&matt_tool=38524122#origin=share&sid=share&wid=MLB6175357696,
+Aspirador de pó,Limpeza,,1,https://a.co/d/031qBuFC,
+Sanduicheira,Cozinha,,1,https://a.co/d/0iXsJ6UD,
+Batedeira,Cozinha,,1,https://a.co/d/0agLgwWT,
+Air fryer,Cozinha,,1,https://a.co/d/09MlZGfl,
+Jogo de copo,Cozinha,,2,https://a.co/d/051smw94,
+Purificador de água,Cozinha,,1,https://www.mercadolivre.com.br/purificador-everest-star-preto-agua-gelada-por-compressor/p/MLB24703923?pdp_filters=item_id%3AMLB5269932348&attributes=COLOR%3APreto_vpp&matt_tool=38524122#origin=share&sid=share&wid=MLB5269932348,
+Cama,Quarto,Conversar com o casal sobre detalhes,1,
+Máquina de lavar louça,Cozinha,,1,https://a.co/d/0eCOViJi,
+Forno,Cozinha,,1,https://a.co/d/09L2wwve,
+Microondas,Cozinha,,1,https://a.co/d/04h7JTTf,
+Sofá,Sala,Conversar com o casal sobre detalhes,1,https://a.co/d/02Ht5LvI,
+Jogo de mesa e cadeiras,Sala,,1,https://megamoveis.com.br/loja/mesa-de-jantar-fabricacao-6lugares-12lugares-ofertas/,
+Televisão,Sala,Conversar com o casal sobre detalhes,1,https://www.amazon.com.br/TCL-QLED-SMART-40S5K-GOOGLE/dp/B0FTGJDF9R/ref=sr_1_17?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=11BG2AQL6PJL5&dib=eyJ2IjoiMSJ9.lEpnAPsGPaN3eRbziBRqMJ9DR5Rz4IBUhtNqtYtGGVndZGQjYji97i3c_d9HNPd7HqjKhgc34VJILjoHRLM955GPs4hpjRyhGEyP6RkSw1RY4eWCbFY7Xj6P6bfUSH7vg0FbR9xGJ2PVzAs2cQ2FxiecMwpQvgb5lrUucBMgqomfuW1AMRGvHjvmxekTSZPiCo4Rt_xlScV--CZUzb9d38qzBZx8WdXUkZDt7QoWBQhKvR01QzpwVnx1syXwK4-n9IJ0vr9LHViRf-wg3YP91HExbvTSlrrMPDfn-iuTmKQ.O9WUTRkhkfxxFvB7cXAUqDj-Ane6OxNaBdr-SmJxlRs&dib_tag=se&keywords=smart+tv&qid=1772673112&s=electronics&sprefix=smart+tv%2Celectronics%2C197&sr=1-17,
+Marinex,Cozinha,,2,https://www.mercadolivre.com.br/assadeiras-jogo-6-assadeiras-de-vidro-com-tampa-cor-cinza-marinex/p/MLB28025230?pdp_filters=item_id%3AMLB6312029248&matt_tool=38524122#origin=share&sid=share&wid=MLB6312029248,
+Forma de bolo,Cozinha,,1,https://www.magazineluiza.com.br/forma-de-bolo-ou-pudim-polida-com-tubo-22-cm-2-3-lts-abc/p/ag1502c622/ud/assa/?partner_id=64853&utm_source=pdp_desk&utm_medium=share,
+Kit Forma de Pudim,Cozinha,,1,https://a.co/d/0bvKbcVj,
+Quejeira,Cozinha,,1,https://a.co/d/0etUx22q,
+Kit Peneira,Cozinha,,1,https://a.co/d/02yF903O,
+Potes herméticos,Cozinha,,3,https://a.co/d/0fDt6eNy,
+Jogo de Jarra e copos,Cozinha,,1,https://www.magazineluiza.com.br/jogo-de-copos-com-jarra-de-vidro-7-pecas-haus-concept-filetto/p/238951600/ud/jarr/?partner_id=64853&utm_source=pdp_desk&utm_medium=share,
+Tábua de passar roupa,Limpeza,,1,https://a.co/d/0a5mXFtK,
+Jogo de taça,Cozinha,,1,https://a.co/d/0f3Ni6Av,
+Jogo de pia,Cozinha,,1,https://a.co/d/0be43vh1,
+Jogo de banheiro,Banheiro,,2,https://a.co/d/06RAa2pn,
+Kit mantimentos,Cozinha,,1,https://www.mercadolivre.com.br/kit-12-potes-hermeticos-porta-mantimentos-quadrado-cozinha-cor-transparente/p/MLB59182671?pdp_filters=item_id%3AMLB4240547955&matt_tool=38524122#origin=share&sid=share&wid=MLB4240547955,
+Ar condicionado,Quarto,Conversar com o casal sobre detalhes,1,https://a.co/d/07htiA5f,
+Fuê,Cozinha,,1,https://a.co/d/05V8NWlq,
+Jogo de talheres,Cozinha,,1,https://a.co/d/0gSevtrz,
+Faqueiro,Cozinha,,1,https://a.co/d/0fLCM1B4,
+Kit de utensílios de cozinha,Cozinha,Kit 5 peças,1,https://loja.mimostyle.com.br/kit-com-5-pecas-concha-colher-de-arroz-escumadeira-colher-de-espaguete-espatula-de-inox-colecao-isa-scherer,
+Porta temperos,Cozinha,,1,https://a.co/d/0gF8T4wo,
+Jogo de xicaras,Cozinha,,1,https://www.oxfordporcelanas.com.br/cj-6-xicaras-com-pires-unni-boho/p?skuId=60607800&srsltid=AfmBOoqA1SZ1gQ9Z3v5XCTiM5N9icc_Ehhl6-91Ho6qRNYYnSD4cZi5Faac,
+Panela de pressão,Cozinha,,1,https://a.co/d/0ddIip9o,
+Tábua de carne,Cozinha,,1,https://www.mercadolivre.com.br/tabua-para-churrasco-madeira-teca-tabua-de-corte/up/MLBU1714011876?pdp_filters=item_id%3AMLB1410299257&matt_tool=38524122#origin=share&sid=share&wid=MLB1410299257,
+Forma para pizza,Cozinha,,1,https://a.co/d/07AgsFa2,
+Aparelho de jantar,Cozinha,,1,https://a.co/d/0deUPC9S,
+Bowls Tigelas de Inox,Cozinha,,1,https://a.co/d/0dt3nIqd,
+Bowls Tigelas De Cerâmica Azul,Cozinha,,1,https://a.co/d/0bCL3PBI,
+Taça Cristal,Cozinha,,1,https://www.amazon.com.br/Ta%C3%A7as-Vinho-Gastro-Bohemia-Transparente/dp/B00A8G2OIM/ref=asc_df_B00A8G2OIM?mcid=d3bd54ee0a1f3051a123c88cd2c02251&tag=googleshopp00-20&linkCode=df0&hvadid=709964506238&hvpos=&hvnetw=g&hvrand=16121691036072621012&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196671&hvtargid=pla-809473042686&psc=1&language=pt_BR&gad_source=1,
+Taça de Sobremesa,Cozinha,,2,https://www.amazon.com.br/Conjunto-Canelado-Sobremesa-Resistente-Sofisticado/dp/B0FHDT3DJL/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=4LEXI6F554A5&dib=eyJ2IjoiMSJ9.JvM7PW20n8r7bPLsJBPQjr5b31hZ-PfKENFEHdtSucvyS-qge80VVW_z9DQmXfThfY1knFrcM0Mg5tV9UuhmzjrlDVzIH3h-w2gQ2L-oRbftZbjMgJohf7NAWsEtdVEn1dfzQxemVF_KEvUMUb3ZVpJPy2don7Qv_czvxn6siD3sDYBnQy6OrWfsFAkNuKfvbT73elMjNk2NfDtsiHz6T4WdU9mkh7zqkSbi9DSd8M3dkgLID692PFLXjjwz3rF03w1qH25Fz97VRf0FFIh9sDDfdoZeuo7SmH11eRbUTUo.V9dWp9v2Uxwp-c1G8a4YA1zMoY84v3G-OzC1Nr5MgGM&dib_tag=se&keywords=ta%C3%A7a+sobremesa&qid=1758242958&sprefix=ta%C3%A7a+sobremesa%2Caps%2C280&sr=8-5&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9,
+Escorredor de Macarrão Inox,Cozinha,,1,https://www.amazon.com.br/Escorredor-Macarr%C3%A3o-Alimentos-Vegetais-Multiuso/dp/B0DCPDZH2N/ref=asc_df_B0DCPDZH2N?mcid=7b31720451f83389b2a6e761d9008265&tag=googleshopp00-20&linkCode=df0&hvadid=709876289439&hvpos=&hvnetw=g&hvrand=16180008749269921563&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196671&hvtargid=pla-2364536886640&psc=1&language=pt_BR&gad_source=1,
+Pá para Bolo,Cozinha,,1,https://www.tramontina.com.br/pa-para-bolo-tramontina-amazonas-em-aco-inox/63960150.html,
+Ralador,Cozinha,,1,https://a.co/d/099aP2E2,
+Espremedor de batata,Cozinha,,1,https://a.co/d/0hDhxifi,
+Escorredor de Louça,Cozinha,,1,https://a.co/d/0iwb6Sg2,
+Manta para Sofá,Limpeza,,1,https://a.co/d/05DQaGrS,

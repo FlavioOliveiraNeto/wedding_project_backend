@@ -14,7 +14,8 @@ module Api
             quantity: gift.quantity,
             remaining: gift.remaining,
             sold_out: gift.sold_out?,
-            selected_by: selected_by_names(gift)
+            selected_by: selected_by_names(gift),
+            purchase_url: gift.purchase_url
           }
         }
       end
